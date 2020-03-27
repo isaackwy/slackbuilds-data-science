@@ -1,2 +1,2 @@
 # slackbuilds-data-science
-Data Science Slackbuilds for Slackware
+Slackbuild Packages for Data Science
