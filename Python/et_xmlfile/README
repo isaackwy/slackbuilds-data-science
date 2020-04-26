@@ -1,0 +1,4 @@
+et_xmlfile is a low memory library for creating large XML files.
+
+This SlackBuild builds in Python 2 and Python 3. Thus, python3 is 
+required.
