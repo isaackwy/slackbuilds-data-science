@@ -6,7 +6,7 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
      |-----handy-ruler------------------------------------------------------|
-jdcal: jdcal (Python module)
+jdcal: jdcal (python module to convert dates)
 jdcal:
 jdcal: jdcal contains functions for converting between Julian dates and
 jdcal: calendar dates.

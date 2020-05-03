@@ -6,7 +6,7 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
           |-----handy-ruler------------------------------------------------------|
-et_xmlfile: et_xmlfile (Python library)
+et_xmlfile: et_xmlfile (python library to create large XML files)
 et_xmlfile:
 et_xmlfile: et_xmlfile is a low memory library for creating large XML files.
 et_xmlfile:
