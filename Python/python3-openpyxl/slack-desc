@@ -6,7 +6,7 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
                 |-----handy-ruler------------------------------------------------------|
-python3-openpyxl: python3-openpyxl (Python library)
+python3-openpyxl: python3-openpyxl (Python library to read/write Excel 2010 files)
 python3-openpyxl:
 python3-openpyxl: openpyxl is a Python library to read/write Excel 2010
 python3-openpyxl: xlsx/xlsm/xltx/xltm files.
