@@ -75,8 +75,14 @@ find -L . \
 # Python 2 support (requires python-soupsieve)
 if $(python2 -c 'import soupsieve' 2>/dev/null); then
   python setup.py install --root=$PKG
+fi
 
-  # Prepare another source tarball for Python 3 support
+# Python 3 support (requires python3-soupsieve)
+# Thanks to shaypal5 for providing an example package check: 
+# https://gist.github.com/shaypal5/d505af9953cd86f59c750fa600ee4ba6
+if $(python3 -c 'import pkgutil; exit(not pkgutil.find_loader("soupsieve"))'); then
+
+  # Prepare another source tarball before building for Python 3
   cd $TMP
   rm -rf $SRCNAM-$VERSION
   tar xvf $CWD/$SRCNAM-$VERSION.tar.gz
@@ -87,12 +93,12 @@ if $(python2 -c 'import soupsieve' 2>/dev/null); then
     -o -perm 511 \) -exec chmod 755 {} \; -o \
    \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
     -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
-fi
 
-# Python 3 support (Default)
-sed -i "s/-rfI/-rf/" convert-py3k
-sh convert-py3k
-python3 setup.py install --root=$PKG
+  # Build for Python 3 
+  sed -i "s/-rfI/-rf/" convert-py3k
+  sh convert-py3k
+  python3 setup.py install --root=$PKG
+fi
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
