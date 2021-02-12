@@ -78,7 +78,7 @@ if $(python2 -c 'import soupsieve' 2>/dev/null); then
 fi
 
 # Python 3 support (requires python3-soupsieve)
-# Thanks shaypal5 for providing an example package check: 
+# shaypal5 provided an example package check (Thanks shaypal5): 
 # https://gist.github.com/shaypal5/d505af9953cd86f59c750fa600ee4ba6
 if $(python3 -c 'import pkgutil; exit(not pkgutil.find_loader("soupsieve"))'); then
 
