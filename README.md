@@ -1,5 +1,5 @@
 # slackbuilds-data-science-14.2
-Slackbuild Scripts for Data Science
+Data Science SlackBuilds for Slackware 14.2
 
 SlackBuilds submissions are closed for 14.2. Hence, I have archived this repository.
 
